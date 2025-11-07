@@ -12,6 +12,6 @@ Start date: 07/11/2025
 ```
 
 ## Technical Stacks
-- Java 17
-- Spring boot 3.5.7
-- Maven 3.5+
+ - Java 17
+ - Spring boot 3.5.7
+ - Maven 3.5+
