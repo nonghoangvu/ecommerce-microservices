@@ -1,4 +1,4 @@
-package vn.microservice.authentication_service;
+package vn.microservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
