@@ -22,7 +22,7 @@ spring:
                   - OPTIONS
           routes: # điều hướng request đến service tương ứng thông qua chỉ định trên url
             - id: authentication-service
-              uri: http://${HOST_NAME:localhost}:8081
+              uri: http://${HOST_NAME:localhost}:8081/auth
               predicates:
                 - Path=/auth/**, /v3/api-docs/authentication-service
               filters:
