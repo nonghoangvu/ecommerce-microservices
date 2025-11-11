@@ -29,4 +29,4 @@ Download và cài đặt [drawio](https://www.drawio.com/)
     - Proxy
 
 ### 3. Infra
-![infra.png](./gallery/infra.png)
+![infra.png](../gallery/infra.png)
