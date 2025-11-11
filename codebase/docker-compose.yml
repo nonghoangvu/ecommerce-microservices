@@ -1,0 +1,204 @@
+services:
+  redis:
+    image: redis:6.2-alpine
+    container_name: redis
+    hostname: redis
+    ports:
+      - '6379:6379'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_DISABLE_COMMANDS=FLUSHDB;FLUSHALL
+    networks:
+      - default
+
+  postgres:
+    image: postgres
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+      - ./initdb.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - '5439:5432'
+    networks:
+      - default
+
+  elastic-search:
+    image: elasticsearch:7.14.1
+    container_name: elasticsearch
+    restart: always
+    ports:
+      - "9200:9200"
+    environment:
+      - discovery.type=single-node
+
+  mongo:
+    image: mongo:6-jammy
+    container_name: mongodb
+    ports:
+      - '27017:27017'
+    volumes:
+      - data:/data/db
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - '22181:2181'
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - '29092:29092'
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: ms-kafka-ui
+    ports:
+      - "9091:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092  # Internal service communication
+    depends_on:
+      - kafka
+    networks:
+      - default
+
+  api-gateway:
+    container_name: api-gateway
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    ports:
+      - '4953:4953'
+    networks:
+      - default
+
+  auth-service:
+    container_name: authentication-service
+    build:
+      context: ./authentication-service
+      dockerfile: Dockerfile
+    environment:
+      API_GATEWAY: http://localhost:4953
+    ports:
+      - '8081:8081'
+    networks:
+      - default
+
+  account-service:
+    container_name: account-service
+    build:
+      context: ./account-service
+      dockerfile: Dockerfile
+    environment:
+      API_GATEWAY: http://localhost:4953
+    ports:
+      - '8082:8082'
+    networks:
+      - default
+
+  product-service:
+    container_name: product-service
+    build:
+      context: ./product-service
+      dockerfile: Dockerfile
+    environment:
+      API_GATEWAY: http://localhost:4953
+    ports:
+      - '8083:8083'
+    networks:
+      - default
+
+  order-service:
+    container_name: order-service
+    build:
+      context: ./order-service
+      dockerfile: Dockerfile
+    environment:
+      API_GATEWAY: http://localhost:4953
+    ports:
+      - '8084:8084'
+    networks:
+      - default
+
+  payment-service:
+    container_name: payment-service
+    build:
+      context: ./payment-service
+      dockerfile: Dockerfile
+    ports:
+      - '8085:8085'
+    networks:
+      - default
+
+  inventory-service:
+    container_name: inventory-service
+    build:
+      context: ./inventory-service
+      dockerfile: Dockerfile
+    environment:
+      API_GATEWAY: http://localhost:4953
+    ports:
+      - '8086:8086'
+    networks:
+      - default
+
+  mail-service:
+    container_name: mail-service
+    build:
+      context: ./mail-service
+      dockerfile: Dockerfile
+    environment:
+      API_GATEWAY: http://localhost:4953
+    ports:
+      - '8087:8087'
+    networks:
+      - default
+
+  notification-service:
+    container_name: notification-service
+    build:
+      context: ./notification-service
+      dockerfile: Dockerfile
+    environment:
+      API_GATEWAY: http://localhost:4953
+    ports:
+      - '8088:8088'
+    networks:
+      - default
+
+  batch-job:
+    container_name: batch-job
+    build:
+      context: ./batch-job
+      dockerfile: Dockerfile
+    ports:
+      - '8089:8089'
+    networks:
+      - default
+
+networks:
+  default:
+    name: api-network
+
+volumes:
+  postgres:
+  data:

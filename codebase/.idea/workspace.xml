@@ -35,30 +35,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AccountServiceApplication.executor": "Run",
-    "Application.ApiGatewayApplication.executor": "Run",
-    "Application.AuthenticationServiceApplication.executor": "Run",
-    "Maven.account-service [compile].executor": "Run",
-    "Maven.account-service [install].executor": "Run",
-    "Maven.api-gateway [clean].executor": "Run",
-    "Maven.api-gateway [compile].executor": "Run",
-    "Maven.authentication-service [clean].executor": "Run",
-    "Maven.authentication-service [compile].executor": "Run",
-    "Maven.authentication-service [install].executor": "Run",
-    "Maven.microservice [clean].executor": "Run",
-    "Maven.microservice [compile].executor": "Run",
-    "Maven.microservice [install].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "codebase",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/vunh/microservice/codebase/authentication-service"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AccountServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AuthenticationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.account-service [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.account-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateway [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.authentication-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.authentication-service [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.authentication-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservice [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservice [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservice [install].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;codebase&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/vunh/microservice/codebase/authentication-service&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\vunh\microservice\codebase\authentication-service" />
@@ -71,7 +71,7 @@
       <recent name="D:\vunh\microservice\codebase" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AuthenticationServiceApplication">
+  <component name="RunManager" selected="Application.ApiGatewayApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.microservice.ApiGatewayApplication" />
       <module name="api-gateway" />
@@ -100,8 +100,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.AuthenticationServiceApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
       </list>
     </recent_temporary>
   </component>

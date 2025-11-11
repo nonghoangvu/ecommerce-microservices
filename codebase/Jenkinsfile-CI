@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'MAVEN'
+    }
+
+    stages {
+        stage ('Clean workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+    }
+
+    // Note: Need to setting Email Notification in Jenkins-lts
+    post {
+        failure {
+            emailext body: '''${SCRIPT, template="groovy-html.template"}''',
+            subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Failed",
+            mimeType: 'text/html',to: "nonghoangvu04@gmail.com"
+        }
+        success {
+            emailext body: '''${SCRIPT, template="groovy-html.template"}''',
+            subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Successful",
+            mimeType: 'text/html',to: "nonghoangvu04@gmail.com"
+        }
+    }
+}
