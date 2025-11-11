@@ -20,6 +20,7 @@
         <module>api-gateway</module>
         <module>authentication-service</module>
         <module>account-service</module>
+        <module>product-service</module>
     </modules>
 
     <properties>
@@ -32,6 +33,21 @@
         <protoc.version>3.21.12</protoc.version>
         <grpc.version>1.68.0</grpc.version>
     </properties>
+
+    <dependencies>
+        <!-- API document-->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webflux-ui</artifactId>
+            <version>2.6.0</version> <!-- Latest version -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+            <version>6.3.3</version>
+        </dependency>
+    </dependencies>
 
     <profiles>
         <profile>

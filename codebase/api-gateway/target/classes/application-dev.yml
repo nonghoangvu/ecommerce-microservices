@@ -20,20 +20,27 @@ spring:
                   - PATCH
                   - DELETE
                   - OPTIONS
-          routes: # điều hướng request đến service tương ứng thông qua chỉ định trên url
+          routes:
             - id: authentication-service
               uri: http://${HOST_NAME:localhost}:8081/auth
               predicates:
                 - Path=/auth/**, /v3/api-docs/authentication-service
               filters:
-                - RewritePath=/auth/(?<segment>.*), /$\{segment} # thay thế ký tự /auth/ thành /
+                - RewritePath=/auth/(?<segment>.*), /$\{segment}
                 - CustomizeFilter
             - id: account-service
               uri: http://${HOST_NAME:localhost}:8082
               predicates:
                 - Path=/account/**, /v3/api-docs/account-service
               filters:
-                - RewritePath=/account/(?<segment>.*), /$\{segment} # thay thế ký tự /account/ thành /
+                - RewritePath=/account/(?<segment>.*), /$\{segment}
+                - CustomizeFilter
+            - id: product-service
+              uri: http://${HOST_NAME:localhost}:8083
+              predicates:
+                - Path=/product/**, /v3/api-docs/product-service
+              filters:
+                - RewritePath=/product/(?<segment>.*), /$\{segment}
                 - CustomizeFilter
 springdoc:
   api-docs:

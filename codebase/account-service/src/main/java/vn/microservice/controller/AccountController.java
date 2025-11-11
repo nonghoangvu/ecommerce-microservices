@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AccountController {
 
-    @GetMapping
+    @GetMapping("init")
     public String init() {
         return "Account service";
     }
