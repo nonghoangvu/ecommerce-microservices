@@ -61,3 +61,5 @@ $ curl --location 'http://localhost:4953/actuator/health'
 - Tạo ___API Gateway___ tại [Spring Initializr](https://start.spring.io/)
 
 - ![authentication-service-init.png](../gallery/authentication-service-init.png)
+
+## [Swagger](http://localhost:8081/swagger-ui/index.html)

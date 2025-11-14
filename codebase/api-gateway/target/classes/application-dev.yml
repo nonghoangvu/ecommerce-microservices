@@ -11,7 +11,7 @@ spring:
           globalcors:
             corsConfigurations:
               '[/**]':
-                allowedOrigins: "http://localhost:5173"
+                allowedOrigins: "*"
                 allowedHeaders: "*"
                 allowedMethods:
                   - GET
@@ -24,43 +24,21 @@ spring:
             - id: authentication-service
               uri: http://${HOST_NAME:localhost}:8081/auth
               predicates:
-                - Path=/auth/**, /v3/api-docs/authentication-service
+                - Path=/auth/**
               filters:
                 - RewritePath=/auth/(?<segment>.*), /$\{segment}
                 - CustomizeFilter
             - id: account-service
               uri: http://${HOST_NAME:localhost}:8082
               predicates:
-                - Path=/account/**, /v3/api-docs/account-service
+                - Path=/account/**
               filters:
                 - RewritePath=/account/(?<segment>.*), /$\{segment}
                 - CustomizeFilter
             - id: product-service
               uri: http://${HOST_NAME:localhost}:8083
               predicates:
-                - Path=/product/**, /v3/api-docs/product-service
+                - Path=/product/**
               filters:
                 - RewritePath=/product/(?<segment>.*), /$\{segment}
                 - CustomizeFilter
-springdoc:
-  api-docs:
-    enabled: true
-  swagger-ui:
-    enabled: true
-    path: /swagger-ui.html
-    config-url: /v3/api-docs/swagger-config
-    urls:
-      - url: /v3/api-docs
-        name: API Gateway
-      - url: /v3/api-docs/authentication-service
-        name: Authentication Service
-      - url: /v3/api-docs/account-service
-        name: Account Service
-      - url: /v3/api-docs/product-service
-        name: Product Service
-      - url: /v3/api-docs/order-service
-        name: Order Service
-      - url: /v3/api-docs/inventory-service
-        name: Inventory Service
-      - url: /v3/api-docs/mail-service
-        name: Mail Service

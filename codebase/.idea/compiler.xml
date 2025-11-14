@@ -14,9 +14,10 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
         </processorPath>
-        <module name="account-service" />
         <module name="api-gateway" />
+        <module name="product-service" />
         <module name="authentication-service" />
+        <module name="account-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +31,7 @@
       <module name="authentication-service" options="-parameters" />
       <module name="codebase" options="-parameters" />
       <module name="microservice" options="-parameters" />
+      <module name="product-service" options="-parameters" />
     </option>
   </component>
 </project>

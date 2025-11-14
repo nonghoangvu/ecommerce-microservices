@@ -21,6 +21,7 @@ codebase/.idea/jarRepositories.xml
 .settings
 .springBeans
 .sts4-cache
+.idea
 
 ### NetBeans ###
 /nbproject/private/
