@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f8b3484-84ca-45d5-9b4c-9063dbd25860" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/messages_vi.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUIDELINE.md" beforeDir="false" afterPath="$PROJECT_DIR$/GUIDELINE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/classes/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/controller/ProductController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +33,18 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+        <option name="workOffline" value="true" />
       </MavenGeneralSettings>
     </option>
+    <option name="explicitlyEnabledProfiles" value="dev" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="358PgVxAlQdzMgMBKiaTUFIw7tj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,9 +52,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.AccountServiceApplication.executor": "Run",
-    "Application.ApiGatewayApplication.executor": "Debug",
+    "Application.ApiGatewayApplication.executor": "Run",
     "Application.AuthenticationServiceApplication.executor": "Run",
-    "Application.ProductServiceApplication.executor": "Debug",
+    "Application.ProductServiceApplication.executor": "Run",
     "Maven.account-service [compile].executor": "Run",
     "Maven.account-service [install].executor": "Run",
     "Maven.api-gateway [clean].executor": "Run",
@@ -56,28 +62,40 @@
     "Maven.authentication-service [clean].executor": "Run",
     "Maven.authentication-service [compile].executor": "Run",
     "Maven.authentication-service [install].executor": "Run",
+    "Maven.common [clean].executor": "Run",
+    "Maven.common [deploy].executor": "Run",
+    "Maven.common [install].executor": "Run",
     "Maven.microservice [clean].executor": "Run",
     "Maven.microservice [compile].executor": "Run",
     "Maven.microservice [install].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "OverrideImplement.generate.javadoc": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "codebase",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/vunh/microservice/codebase/authentication-service"
+    "last_opened_file_path": "D:/vunh/microservice/codebase/product-service/src/main/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "File.Encoding"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\vunh\microservice\codebase\authentication-service" />
+      <recent name="D:\vunh\microservice\codebase\product-service\src\main\resources" />
+      <recent name="D:\vunh\microservice\codebase\common\src\main\resources" />
       <recent name="D:\vunh\microservice\codebase" />
+      <recent name="D:\vunh\microservice\codebase\authentication-service" />
       <recent name="D:\vunh\microservice\codebase\authentication-service\src\main\resources" />
-      <recent name="D:\vunh\microservice\codebase\account-service\src\main\resources" />
-      <recent name="D:\vunh\microservice\codebase\api-gateway\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\vunh\microservice\codebase" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="vn.microservice.other" />
+      <recent name="vn.microservice.i18n" />
     </key>
   </component>
   <component name="RunManager" selected="Application.ProductServiceApplication">
@@ -122,9 +140,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.ProductServiceApplication" />
         <item itemvalue="Application.AuthenticationServiceApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
       </list>
     </recent_temporary>
   </component>

@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import vn.i18n.I18N;
 import vn.microservice.controller.response.ApiResponse;
 import vn.microservice.service.ProductService;
 
@@ -18,6 +19,9 @@ public class ProductController {
     /* Product Service */
     private final ProductService productService;
 
+    /* I18N */
+    private final I18N message;
+
     /**
      * Get all product
      *
@@ -28,7 +32,7 @@ public class ProductController {
         log.info("Get all product");
         return ApiResponse.builder()
                 .status(HttpStatus.OK.value())
-                .message("message.success")
+                .message(message.getMessage("message.readDataSuccess"))
                 .data(productService.getAllProduct())
                 .build();
     }
@@ -44,7 +48,7 @@ public class ProductController {
         log.info("Get product by productId {}", productId);
         return ApiResponse.builder()
                 .status(HttpStatus.OK.value())
-                .message("message.success")
+                .message(message.getMessage("message.success"))
                 .data(productService.getProductByProductId(productId))
                 .build();
     }
@@ -60,7 +64,7 @@ public class ProductController {
         log.info("Save product");
         return ApiResponse.builder()
                 .status(HttpStatus.OK.value())
-                .message("message.success")
+                .message(message.getMessage("message.success"))
                 .data(productService.saveProduct(productId))
                 .build();
     }
@@ -77,7 +81,7 @@ public class ProductController {
         productService.deleteProduct(productId);
         return ApiResponse.builder()
                 .status(HttpStatus.OK.value())
-                .message("message.success")
+                .message(message.getMessage("message.deleteSuccess"))
                 .build();
     }
 }
