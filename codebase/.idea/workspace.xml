@@ -5,14 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f8b3484-84ca-45d5-9b4c-9063dbd25860" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/messages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/messages_vi.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/batch/AccountServiceBatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/common/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/common/EGender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/common/EUserStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/common/EUserType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/config/SpringFoxConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/dto/request/AccountConditionRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/dto/request/AccountRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/dto/request/base/ConditionRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/dto/response/UserResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/dto/response/base/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/dto/response/base/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/dto/response/base/PageResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/exception/GlobalException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/exception/InvalidDataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/service/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/resources/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/resources/messages_vi.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/AccountServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/AccountServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/account-service-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/account-service-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/classes/vn/microservice/AccountServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/target/classes/vn/microservice/AccountServiceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/classes/vn/microservice/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/target/classes/vn/microservice/controller/AccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/surefire-reports/2025-11-07T19-30-57_702.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/surefire-reports/TEST-vn.microservice.AccountServiceApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/target/surefire-reports/TEST-vn.microservice.AccountServiceApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/surefire-reports/vn.microservice.AccountServiceApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/target/surefire-reports/vn.microservice.AccountServiceApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initdb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/initdb.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +55,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
@@ -51,10 +86,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AccountService.executor": "Run",
     "Application.AccountServiceApplication.executor": "Run",
     "Application.ApiGatewayApplication.executor": "Run",
     "Application.AuthenticationServiceApplication.executor": "Run",
     "Application.ProductServiceApplication.executor": "Run",
+    "Maven.account-service [clean].executor": "Run",
     "Maven.account-service [compile].executor": "Run",
     "Maven.account-service [install].executor": "Run",
     "Maven.api-gateway [clean].executor": "Run",
@@ -73,9 +110,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "codebase",
+    "git-widget-placeholder": "account-service",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/vunh/microservice/codebase/product-service/src/main/resources",
+    "last_opened_file_path": "D:/vunh/microservice/codebase/account-service/src/main/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -84,11 +121,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\vunh\microservice\codebase\account-service\src\main\resources" />
       <recent name="D:\vunh\microservice\codebase\product-service\src\main\resources" />
       <recent name="D:\vunh\microservice\codebase\common\src\main\resources" />
       <recent name="D:\vunh\microservice\codebase" />
       <recent name="D:\vunh\microservice\codebase\authentication-service" />
-      <recent name="D:\vunh\microservice\codebase\authentication-service\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\vunh\microservice\codebase" />
@@ -98,7 +135,17 @@
       <recent name="vn.microservice.i18n" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ProductServiceApplication">
+  <component name="RunManager" selected="Application.AccountService">
+    <configuration name="AccountService" type="Application" factoryName="Application">
+      <option name="envFilePaths">
+        <option value="$PROJECT_DIR$/.env" />
+      </option>
+      <option name="MAIN_CLASS_NAME" value="vn.microservice.AccountServiceApplication" />
+      <module name="account-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.microservice.ApiGatewayApplication" />
       <module name="api-gateway" />
@@ -138,11 +185,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.AccountService" />
+      <item itemvalue="Application.ApiGatewayApplication" />
+      <item itemvalue="Application.AuthenticationServiceApplication" />
+      <item itemvalue="Application.ProductServiceApplication" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.ProductServiceApplication" />
         <item itemvalue="Application.AuthenticationServiceApplication" />
-        <item itemvalue="Application.ApiGatewayApplication" />
       </list>
     </recent_temporary>
   </component>
