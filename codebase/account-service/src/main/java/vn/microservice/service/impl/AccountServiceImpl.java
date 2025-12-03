@@ -123,8 +123,10 @@ public class AccountServiceImpl implements AccountService {
         user.setEmail(request.getEmail());
         user.setUsername(request.getUsername());
         user.setType(request.getType());
-        user.setStatus(EUserStatus.ACTIVE);
+        user.setStatus(EUserStatus.INACTIVE);
         user.setPassword(passwordEncoder.encode(request.getPassword()));
+
+        log.info("Send email confirm");
 
         // Save and return userId
         log.info("User has been saved");
