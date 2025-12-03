@@ -136,6 +136,7 @@ public class AccountServiceImpl implements AccountService {
      * Make sure the account used
      */
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void checkpointAccount() {
         List<User> users = new ArrayList<>();
         userRepository.findAll().forEach(user -> {
