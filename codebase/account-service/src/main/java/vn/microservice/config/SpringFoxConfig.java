@@ -16,9 +16,14 @@ import org.springframework.context.annotation.Profile;
 
 import java.util.List;
 
+/**
+ * Config for swagger
+ * Active with profile dev or test
+ */
 @Configuration
 @Profile({"dev", "test"})
 public class SpringFoxConfig {
+
     @Bean
     public GroupedOpenApi publicApi(@Value("${openapi.service.api-docs}") String apiDocs) {
         return org.springdoc.core.models.GroupedOpenApi.builder()

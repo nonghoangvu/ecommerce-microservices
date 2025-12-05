@@ -50,11 +50,5 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-        <dependency>
-            <groupId>wfc</groupId>
-            <artifactId>i18n</artifactId>
-            <version>1.0.5</version>
-        </dependency>
 	</dependencies>
 </project>

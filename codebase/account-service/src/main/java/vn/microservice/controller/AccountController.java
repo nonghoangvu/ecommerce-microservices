@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import vn.i18n.I18N;
+import vn.microservice.config.MessageUtils;
 import vn.microservice.dto.request.AccountConditionRequest;
 import vn.microservice.dto.request.AccountRequest;
 import vn.microservice.dto.response.base.ApiResponse;
@@ -22,15 +22,11 @@ import vn.microservice.service.AccountService;
 @Valid
 public class AccountController {
 
-    /**
-     * Account service
-     */
+    /* Account service */
     private final AccountService accountService;
 
-    /**
-     * I18N
-     */
-    private final I18N message;
+    /* I18N */
+    private final MessageUtils messageUtils;
 
     /**
      * Get List Account
@@ -43,7 +39,7 @@ public class AccountController {
         log.info("Get list account");
         return ApiResponse.builder()
                 .status(HttpStatus.OK.value())
-                .message(message.getMessage("message.success"))
+                .message(messageUtils.getMessage("message.success"))
                 .data(accountService.getAllAccount(condition))
                 .build();
     }
@@ -55,11 +51,13 @@ public class AccountController {
      * @return ApiResponse
      */
     @GetMapping("/{userId}")
-    public ApiResponse getAccountById(@Min(1) @PathVariable Long userId) {
+    public ApiResponse getAccountById(
+            @Min(value = 1) @PathVariable Long userId
+    ) {
         log.info("Get account by id {}", userId);
         return ApiResponse.builder()
                 .status(HttpStatus.OK.value())
-                .message(message.getMessage("message.success"))
+                .message(messageUtils.getMessage("message.success"))
                 .data(accountService.findAccountById(userId))
                 .build();
     }
@@ -75,7 +73,7 @@ public class AccountController {
         log.info("Save account");
         return ApiResponse.builder()
                 .status(HttpStatus.OK.value())
-                .message(message.getMessage("message.success"))
+                .message(messageUtils.getMessage("message.success"))
                 .data(accountService.saveAccount(request))
                 .build();
     }

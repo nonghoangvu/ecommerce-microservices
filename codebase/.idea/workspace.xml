@@ -5,20 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f8b3484-84ca-45d5-9b4c-9063dbd25860" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/config/KafkaProduceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/config/MessageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/config/MessageUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/config/KafkaProduceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/config/KafkaProduceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/config/SpringFoxConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/config/SpringFoxConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/controller/AccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/service/impl/AccountServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account-service/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account-service/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-service/target/surefire-reports/TEST-vn.microservice.AccountServiceApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-service/target/surefire-reports/vn.microservice.AccountServiceApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-service/target/test-classes/vn/microservice/AccountServiceApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/classes/vn/microservice/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/target/classes/vn/microservice/controller/AccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/surefire-reports/2025-11-07T19-30-57_702.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/surefire-reports/TEST-vn.microservice.ApiGatewayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/surefire-reports/TEST-vn.microservice.ApiGatewayApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/surefire-reports/vn.microservice.ApiGatewayApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/surefire-reports/vn.microservice.ApiGatewayApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/controller/ProductController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +68,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.AccountService.executor": "Debug",
+    "Application.AccountService.executor": "Run",
     "Application.AccountServiceApplication.executor": "Run",
     "Application.ApiGatewayApplication.executor": "Run",
     "Application.AuthenticationServiceApplication.executor": "Run",
@@ -104,11 +113,12 @@
       <recent name="D:\vunh\microservice\codebase" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="vn.microservice.config" />
       <recent name="vn.microservice.other" />
       <recent name="vn.microservice.i18n" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AccountService">
+  <component name="RunManager" selected="Application.ProductServiceApplication">
     <configuration name="AccountService" type="Application" factoryName="Application">
       <option name="envFilePaths">
         <option value="$PROJECT_DIR$/.env" />
@@ -166,8 +176,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.ProductServiceApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.AuthenticationServiceApplication" />
       </list>
     </recent_temporary>

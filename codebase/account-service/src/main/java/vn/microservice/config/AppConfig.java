@@ -9,10 +9,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.concurrent.Executor;
 
+/**
+ * App config
+ */
 @Configuration
 @EnableAsync
 public class AppConfig {
 
+    /**
+     * Task executor
+     * @return Executor
+     */
     @Bean(name = "taskExecutor")
     public Executor taskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
@@ -24,6 +31,10 @@ public class AppConfig {
         return executor;
     }
 
+    /**
+     * Been password encoder
+     * @return PasswordEncoder
+     */
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();

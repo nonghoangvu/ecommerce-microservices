@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import vn.i18n.I18N;
+import vn.microservice.config.MessageUtils;
 import vn.microservice.controller.response.ApiResponse;
 import vn.microservice.service.ProductService;
 
@@ -20,7 +20,7 @@ public class ProductController {
     private final ProductService productService;
 
     /* I18N */
-    private final I18N message;
+    private final MessageUtils message;
 
     /**
      * Get all product

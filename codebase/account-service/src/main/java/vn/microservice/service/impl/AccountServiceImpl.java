@@ -1,18 +1,21 @@
 package vn.microservice.service.impl;
 
+import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
-import vn.i18n.I18N;
 import vn.microservice.common.EUserStatus;
+import vn.microservice.config.MessageUtils;
 import vn.microservice.dto.request.AccountConditionRequest;
 import vn.microservice.dto.request.AccountRequest;
 import vn.microservice.dto.response.UserResponseDTO;
@@ -23,7 +26,9 @@ import vn.microservice.repository.UserRepository;
 import vn.microservice.service.AccountService;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Account Service implement
@@ -41,12 +46,23 @@ public class AccountServiceImpl implements AccountService {
     /**
      * I18N
      */
-    private final I18N message;
+    private final MessageUtils message;
 
     /**
      * Password Encoder
      */
     private final PasswordEncoder passwordEncoder;
+
+    /**
+     * kafka template
+     */
+    private final KafkaTemplate<String, String> kafkaTemplate;
+
+    /**
+     * Topic
+     */
+    @Value("${spring.kafka.topic}")
+    private String sendEmailTopic;
 
     /**
      * Get all account
@@ -126,7 +142,14 @@ public class AccountServiceImpl implements AccountService {
         user.setStatus(EUserStatus.INACTIVE);
         user.setPassword(passwordEncoder.encode(request.getPassword()));
 
-        log.info("Send email confirm");
+        Map<String, Object> message = new LinkedHashMap<>();
+        message.put("userId", user.getId());
+        message.put("email", user.getEmail());
+        message.put("secretCode", "123");
+
+        String json = new Gson().toJson(message);
+        //kafkaTemplate.send(sendEmailTopic, json);
+        log.info("Send email confirm message {}", json);
 
         // Save and return userId
         log.info("User has been saved");
