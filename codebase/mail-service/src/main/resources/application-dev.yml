@@ -1,0 +1,17 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  devtools:
+    add-properties: true
+  messages:
+    basename: messages
+  kafka:
+    bootstrap-servers: ${BOOTSTRAP_SERVERS:localhost:9092}
+    topic: confirm-account-topic
+openapi:
+  service:
+    api-docs: mail-service
+    server: ${HOST_NAME:http://localhost}:8084/mail-service
+    title: Mail service
+    version: 1.0.0

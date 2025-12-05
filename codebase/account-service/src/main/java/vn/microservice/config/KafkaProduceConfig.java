@@ -29,7 +29,7 @@ public class KafkaProduceConfig {
 
     @Bean
     public ProducerFactory<String, String> producerFactory() {
-        log.info("Creating producer factory");
+        log.info("Creating producer factory {}", bootstrapServers);
 
         Map<String, Object> props = new HashMap<>();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);

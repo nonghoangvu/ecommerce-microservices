@@ -1,0 +1,17 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: mail-service
+  profiles:
+    active: @spring.profiles.active@
+
+management: # Health check
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+logging:
+  level:
+    root: INFO
+    web: OFF

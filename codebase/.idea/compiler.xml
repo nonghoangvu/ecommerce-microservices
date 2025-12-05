@@ -18,6 +18,7 @@
         <module name="product-service" />
         <module name="authentication-service" />
         <module name="account-service" />
+        <module name="mail-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,6 +33,7 @@
       <module name="authentication-service" options="-parameters" />
       <module name="codebase" options="-parameters" />
       <module name="common" options="-parameters" />
+      <module name="mail-service" options="-parameters" />
       <module name="microservice" options="-parameters" />
       <module name="product-service" options="-parameters" />
     </option>

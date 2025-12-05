@@ -148,7 +148,7 @@ public class AccountServiceImpl implements AccountService {
         message.put("secretCode", "123");
 
         String json = new Gson().toJson(message);
-        //kafkaTemplate.send(sendEmailTopic, json);
+        kafkaTemplate.send(sendEmailTopic, json);
         log.info("Send email confirm message {}", json);
 
         // Save and return userId
