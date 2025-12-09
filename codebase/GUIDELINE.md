@@ -108,7 +108,16 @@ services:
     depends_on:
       - kafka
 
+  mongo:
+    image: mongo:6-jammy
+    container_name: mongodb
+    ports:
+      - '27017:27017'
+    volumes:
+      - data:/data/db
 networks:
   default:
     name: api-network
+volumes:
+  data:
 ```

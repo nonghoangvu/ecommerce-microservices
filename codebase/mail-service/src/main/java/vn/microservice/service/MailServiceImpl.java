@@ -1,4 +1,4 @@
-package vn.microservice.service.impl;
+package vn.microservice.service;
 
 import com.google.gson.Gson;
 import lombok.Getter;

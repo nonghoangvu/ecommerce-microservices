@@ -5,25 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f8b3484-84ca-45d5-9b4c-9063dbd25860" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/controller/request/ProductRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/controller/request/ProductRequestCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/controller/response/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/controller/response/ProductResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/model/ProductDocument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/repository/ProductSearchRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/OrderServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/common/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/config/MessageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/config/SpringFoxConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/controller/request/OrderItemRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/controller/request/PaymentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/controller/request/PlaceOrderRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/controller/request/PmtOrderMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/controller/response/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/controller/response/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/exception/GlobalExceptionHandling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/model/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/vn/microservice/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/messages_vi.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/surefire-reports/TEST-vn.microservice.ApiGatewayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/surefire-reports/TEST-vn.microservice.ApiGatewayApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/surefire-reports/vn.microservice.ApiGatewayApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/surefire-reports/vn.microservice.ApiGatewayApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/exception/GlobalExceptionHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/exception/GlobalExceptionHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUIDELINE.md" beforeDir="false" afterPath="$PROJECT_DIR$/GUIDELINE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/java/vn/microservice/service/AccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mail-service/src/main/java/vn/microservice/service/impl/MailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mail-service/src/main/java/vn/microservice/service/MailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/vn/microservice/service/ProductServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +83,7 @@
     "Application.ApiGatewayApplication.executor": "Run",
     "Application.AuthenticationServiceApplication.executor": "Run",
     "Application.MailServiceApplication.executor": "Run",
+    "Application.OrderServiceApplication.executor": "Debug",
     "Application.ProductServiceApplication.executor": "Debug",
     "Maven.account-service [clean].executor": "Run",
     "Maven.account-service [compile].executor": "Run",
@@ -84,6 +99,9 @@
     "Maven.microservice [clean].executor": "Run",
     "Maven.microservice [compile].executor": "Run",
     "Maven.microservice [install].executor": "Run",
+    "Maven.order-service [clean].executor": "Run",
+    "Maven.order-service [compile].executor": "Run",
+    "Maven.order-service [install].executor": "Run",
     "Maven.product-service [clean].executor": "Run",
     "Maven.product-service [install].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -91,9 +109,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "product-service",
+    "git-widget-placeholder": "order-service",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/vunh/microservice/codebase/mail-service/src/main/java/vn/microservice/controller/response",
+    "last_opened_file_path": "D:/vunh/microservice/codebase",
     "onboarding.tips.debug.path": "D:/vunh/microservice/codebase/mail-service/src/main/java/vn/microservice/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -103,11 +121,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\vunh\microservice\codebase" />
       <recent name="D:\vunh\microservice\codebase\mail-service\src\main\java\vn\microservice\controller\response" />
       <recent name="D:\vunh\microservice\codebase\mail-service\src\main\java\vn\microservice" />
       <recent name="D:\vunh\microservice\codebase\mail-service\src\main\resources" />
       <recent name="D:\vunh\microservice\codebase\account-service\src\main\resources" />
-      <recent name="D:\vunh\microservice\codebase\product-service\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\vunh\microservice\codebase" />
@@ -120,7 +138,7 @@
       <recent name="vn.microservice.i18n" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ApiGatewayApplication">
+  <component name="RunManager" selected="Application.OrderServiceApplication">
     <configuration name="AccountService" type="Application" factoryName="Application">
       <option name="envFilePaths">
         <option value="$PROJECT_DIR$/.env" />
@@ -173,6 +191,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OrderServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="envFilePaths">
+        <option value="$PROJECT_DIR$/.env" />
+      </option>
+      <option name="MAIN_CLASS_NAME" value="vn.microservice.OrderServiceApplication" />
+      <module name="order-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vn.microservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="envFilePaths">
         <option value="$PROJECT_DIR$/.env" />
@@ -191,6 +225,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.AccountService" />
+      <item itemvalue="Application.OrderServiceApplication" />
       <item itemvalue="Application.MailServiceApplication" />
       <item itemvalue="Application.ApiGatewayApplication" />
       <item itemvalue="Application.AuthenticationServiceApplication" />
@@ -198,6 +233,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OrderServiceApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.ProductServiceApplication" />
         <item itemvalue="Application.MailServiceApplication" />

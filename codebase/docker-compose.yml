@@ -38,6 +38,7 @@ services:
 
   mongo:
     image: mongo:6-jammy
+    #image: mongo:5.0.15-alpine
     container_name: mongodb
     ports:
       - '27017:27017'
