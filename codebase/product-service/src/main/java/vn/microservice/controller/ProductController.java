@@ -5,6 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import vn.microservice.config.MessageUtils;
+import vn.microservice.controller.request.ProductRequest;
+import vn.microservice.controller.request.ProductRequestCondition;
 import vn.microservice.controller.response.ApiResponse;
 import vn.microservice.service.ProductService;
 
@@ -28,12 +30,12 @@ public class ProductController {
      * @return ApiResponse
      */
     @GetMapping("/list")
-    public ApiResponse getAllProduct() {
+    public ApiResponse getAllProduct(ProductRequestCondition condition) {
         log.info("Get all product");
         return ApiResponse.builder()
                 .status(HttpStatus.OK.value())
                 .message(message.getMessage("message.readDataSuccess"))
-                .data(productService.getAllProduct())
+                .data(productService.getAllProduct(condition))
                 .build();
     }
 
@@ -56,16 +58,16 @@ public class ProductController {
     /**
      * Save product
      *
-     * @param productId product id
+     * @param request Product request body
      * @return ApiResponse
      */
     @PostMapping("/save")
-    public ApiResponse saveProduct(@RequestParam(required = false) String productId) {
+    public ApiResponse saveProduct(@RequestBody ProductRequest request) {
         log.info("Save product");
         return ApiResponse.builder()
                 .status(HttpStatus.OK.value())
                 .message(message.getMessage("message.success"))
-                .data(productService.saveProduct(productId))
+                .data(productService.saveProduct(request))
                 .build();
     }
 

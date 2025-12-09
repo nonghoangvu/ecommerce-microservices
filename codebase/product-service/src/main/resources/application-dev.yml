@@ -4,6 +4,10 @@ spring:
       on-profile: dev
   devtools:
     add-properties: true
+  elasticsearch:
+    uris: ${ELASTICSEARCH_HOST:DUMMY_URL}
+    username: ${ELASTICSEARCH_USERNAME:DUMMY_USERNAME}
+    password: ${ELASTICSEARCH_PASSWORD:DUMMY_PASSWORD}
 openapi:
   service:
     api-docs: product-service
