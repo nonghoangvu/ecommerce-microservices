@@ -4,6 +4,31 @@ spring:
       on-profile: dev
   devtools:
     add-properties: true
+  datasource:
+    url: jdbc:postgresql://${DATABASE_HOST:localhost}:${DATABASE_PORT:5432}/${DATABASE_NAME:postgres}
+    username: ${DATABASE_USERNAME:dev}
+    password: ${DATABASE_PASSWORD:password}
+    hikari: # Connection poll
+      max-lifetime: 300000      # 5 phút
+      idle-timeout: 60000       # 1 phút
+      validation-timeout: 5000  # 5 giây
+      minimum-idle: 5
+      maximum-pool-size: 20
+    jpa:
+      show-sql: false
+      hibernate:
+        ddl-auto: none
+    servlet:
+      multipart:
+        enabled: true
+        max-file-size: 5GB
+        max-request-size: 5GB
+
+jwt:
+  expiryMinutes: 30
+  expiryDay: 14
+  accessKey: c2VjcmV0QGtleS5hcGlfaGFzX2JlZW5fZGVzaWduZWRfYnlfVGF5TFE=
+  refreshKey: 9k1jJAWAKQCnCEz1pwcPNegbHoLugf9hgEnn6sz5pFc=
 openapi:
   service:
     api-docs: auth-service

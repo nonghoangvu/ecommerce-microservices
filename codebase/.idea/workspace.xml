@@ -5,10 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f8b3484-84ca-45d5-9b4c-9063dbd25860" name="Changes" comment="STRIPE">
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/vn/microservice/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/common/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/common/EGender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/common/EUserStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/common/EUserType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/common/Platform.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/common/TokenType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/config/MessageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/config/SpringFoxConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/dto/request/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/dto/response/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/dto/response/TokenResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/exception/GlobalException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/exception/InvalidDataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/exception/UnauthorizedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/service/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/service/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/service/impl/AuthenticationServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/service/impl/JwtServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/messages_vi.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/vn/microservice/config/CustomizeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/vn/microservice/config/CustomizeFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/vn/microservice/config/CustomizeFilter$Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/classes/vn/microservice/config/CustomizeFilter$Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/vn/microservice/config/CustomizeFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/classes/vn/microservice/config/CustomizeFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/classes/vn/microservice/controller/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/classes/vn/microservice/controller/AuthenticationController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +48,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Exception" />
         <option value="Interface" />
+        <option value="Exception" />
         <option value="Class" />
       </list>
     </option>
@@ -43,7 +73,6 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-        <option name="workOffline" value="true" />
       </MavenGeneralSettings>
     </option>
     <option name="explicitlyEnabledProfiles" value="dev" />
@@ -61,10 +90,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.AccountService.executor": "Run",
+    "Application.AccountService.executor": "Debug",
     "Application.AccountServiceApplication.executor": "Run",
-    "Application.ApiGatewayApplication.executor": "Run",
-    "Application.AuthenticationServiceApplication.executor": "Run",
+    "Application.ApiGatewayApplication.executor": "Debug",
+    "Application.AuthenticationServiceApplication.executor": "Debug",
     "Application.MailServiceApplication.executor": "Run",
     "Application.OrderServiceApplication.executor": "Debug",
     "Application.PaymentServiceApplication.executor": "Debug",
@@ -96,7 +125,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "api-gateway",
+    "git-widget-placeholder": "authentication-service",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/vunh/microservice/codebase",
     "onboarding.tips.debug.path": "D:/vunh/microservice/codebase/mail-service/src/main/java/vn/microservice/Main.java",
@@ -125,7 +154,7 @@
       <recent name="vn.microservice.i18n" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PaymentServiceApplication">
+  <component name="RunManager" selected="Application.ApiGatewayApplication">
     <configuration name="AccountService" type="Application" factoryName="Application">
       <option name="envFilePaths">
         <option value="$PROJECT_DIR$/.env" />
@@ -149,12 +178,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MailServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="AuthenticationServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="envFilePaths">
         <option value="$PROJECT_DIR$/.env" />
       </option>
-      <option name="MAIN_CLASS_NAME" value="vn.microservice.MailServiceApplication" />
-      <module name="mail-service" />
+      <option name="MAIN_CLASS_NAME" value="vn.microservice.AuthenticationServiceApplication" />
+      <module name="authentication-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="vn.microservice.*" />
@@ -215,19 +244,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.AccountService" />
+      <item itemvalue="Application.AuthenticationServiceApplication" />
       <item itemvalue="Application.PaymentServiceApplication" />
       <item itemvalue="Application.OrderServiceApplication" />
-      <item itemvalue="Application.MailServiceApplication" />
       <item itemvalue="Application.ApiGatewayApplication" />
       <item itemvalue="Application.ProductServiceApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.AuthenticationServiceApplication" />
         <item itemvalue="Application.PaymentServiceApplication" />
         <item itemvalue="Application.OrderServiceApplication" />
-        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.ProductServiceApplication" />
-        <item itemvalue="Application.MailServiceApplication" />
       </list>
     </recent_temporary>
   </component>

@@ -1,15 +1,37 @@
 package vn.microservice.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/auth")
-public class AuthenticationController {
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import vn.microservice.dto.request.LoginRequest;
+import vn.microservice.dto.response.TokenResponse;
+import vn.microservice.service.AuthenticationService;
 
-    @GetMapping
-    public String init() {
-        return "Authentication service";
+import static org.springframework.http.HttpStatus.OK;
+
+@RestController
+@Slf4j
+@Tag(name = "Authentication Controller")
+public record AuthenticationController(AuthenticationService authenticationService) {
+
+    @Operation(summary = "Access Token", description = "Generate access token")
+    @PostMapping("/access-token")
+    @ResponseStatus(OK)
+    public ResponseEntity<TokenResponse> accessToken(@RequestBody LoginRequest request) {
+        log.info("POST /access-token");
+        return new ResponseEntity<>(authenticationService.createAccessToken(request), OK);
+    }
+
+    @Operation(summary = "Refresh Token", description = "Generate refresh token")
+    @PostMapping("/refresh-token")
+    @ResponseStatus(OK)
+    public ResponseEntity<TokenResponse> refreshToken(HttpServletRequest request) {
+        log.info("POST /refresh-token");
+        return new ResponseEntity<>(authenticationService.createRefreshToken(request), OK);
     }
 }
