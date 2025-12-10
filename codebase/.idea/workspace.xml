@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f8b3484-84ca-45d5-9b4c-9063dbd25860" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/vn/microservice/controller/response/PaymentIntentResponse.java" afterDir="false" />
+    <list default="true" id="7f8b3484-84ca-45d5-9b4c-9063dbd25860" name="Changes" comment="STRIPE">
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/vn/microservice/ErrorResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/vn/microservice/config/SpringFoxConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/vn/microservice/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/vn/microservice/controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/vn/microservice/exception/GlobalExceptionHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/vn/microservice/exception/GlobalExceptionHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/vn/microservice/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/vn/microservice/service/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/vn/microservice/config/CustomizeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/vn/microservice/config/CustomizeFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "nonghoangvu"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/nonghoangvu/ecommerce-microservices.git",
+    "accountId": "5bef201f-a6b7-46b4-914a-50e7c0a86151"
+  }
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -88,7 +95,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "payment-service",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "api-gateway",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/vunh/microservice/codebase",
     "onboarding.tips.debug.path": "D:/vunh/microservice/codebase/mail-service/src/main/java/vn/microservice/Main.java",
@@ -231,6 +239,27 @@
       <option name="presentableId" value="Default" />
       <updated>1762489270144</updated>
     </task>
+    <task id="LOCAL-00001" summary="STRIPE">
+      <option name="closed" value="true" />
+      <created>1765348806240</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765348806240</updated>
+    </task>
+    <task id="LOCAL-00002" summary="STRIPE">
+      <option name="closed" value="true" />
+      <created>1765348830503</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1765348830503</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="STRIPE" />
+    <option name="LAST_COMMIT_MESSAGE" value="STRIPE" />
   </component>
 </project>
