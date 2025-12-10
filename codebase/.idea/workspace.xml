@@ -5,33 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f8b3484-84ca-45d5-9b4c-9063dbd25860" name="Changes" comment="STRIPE">
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/proto/VerifyTokenGrpcService.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/service/impl/VerifyTokenServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-service/target/classes/application-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-service/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-service/target/classes/vn/microservice/AccountServiceApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-service/target/classes/vn/microservice/controller/AccountController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/application-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/vn/microservice/ApiGatewayApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/vn/microservice/config/CustomizeFilter$Config.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/vn/microservice/config/CustomizeFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/surefire-reports/TEST-vn.microservice.ApiGatewayApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/surefire-reports/vn.microservice.ApiGatewayApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/test-classes/vn/microservice/ApiGatewayApplicationTests.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/target/classes/vn/microservice/controller/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/classes/vn/microservice/controller/AuthenticationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/proto/VerifyTokenGrpcService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/proto/VerifyTokenGrpcService.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/classes/vn/microservice/AuthenticationServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/classes/vn/microservice/controller/AuthenticationController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
