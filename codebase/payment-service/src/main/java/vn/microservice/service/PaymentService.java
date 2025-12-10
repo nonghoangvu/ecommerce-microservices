@@ -19,8 +19,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
-import vn.microservice.common.PaymentStatus;
-import vn.microservice.controller.PaymentInfoRequest;
+import vn.microservice.controller.response.PaymentIntentResponse;
 import vn.microservice.model.Payment;
 import vn.microservice.model.PmtOrderMessage;
 import vn.microservice.repository.PaymentRepository;
@@ -121,11 +120,29 @@ public class PaymentService {
         return PaymentIntent.create(params);
     }
 
+
+
     @Getter
     @Builder
     @AllArgsConstructor
     private static class CallBackMessage {
         private String orderId;
         private String paymentStatus;
+    }
+
+    //====================== NEW ====================
+    public PaymentIntentResponse createPaymentIntent(Long amount, String currency) throws StripeException {
+        log.info("Stripe service create payment intent");
+        PaymentIntentCreateParams params = PaymentIntentCreateParams.builder()
+                .setAmount(amount * 100l) //usd
+                .setCurrency(currency)
+                .build();
+
+        PaymentIntent paymentIntent = PaymentIntent.create(params);
+
+        return PaymentIntentResponse.builder()
+                .paymentId(paymentIntent.getId())
+                .clientSecret(paymentIntent.getClientSecret())
+                .build();
     }
 }

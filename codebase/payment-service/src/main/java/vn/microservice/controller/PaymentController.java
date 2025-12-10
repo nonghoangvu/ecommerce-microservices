@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import vn.microservice.controller.request.PaymentInfoRequest;
+import vn.microservice.controller.response.ApiResponse;
+import vn.microservice.controller.response.PaymentIntentResponse;
 import vn.microservice.service.PaymentService;
 
 import java.util.HashMap;
@@ -76,6 +78,27 @@ public class PaymentController {
 //            throw new Exception("User email is missing");
 //        }
         return paymentService.stripePayment("orderId");
+    }
+
+    /**
+     * curl --location --request POST 'http://localhost:8086/payment/create-payment-intent?amount=100&currency=usd'
+     *
+     * @param amount
+     * @param currency
+     * @return
+     * @throws StripeException
+     */
+    @PostMapping("/create-payment-intent")
+    public ApiResponse createPaymentIntent(@RequestParam Long amount, @RequestParam String currency) throws StripeException {
+        log.info("Create payment intent");
+
+        PaymentIntentResponse response = paymentService.createPaymentIntent(amount, currency);
+
+        return ApiResponse.builder()
+                .status(200)
+                .message("Payment intent created")
+                .data(response)
+                .build();
     }
 }
 
