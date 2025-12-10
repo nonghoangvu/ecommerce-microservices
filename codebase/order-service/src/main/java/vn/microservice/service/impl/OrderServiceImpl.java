@@ -1,14 +1,23 @@
 package vn.microservice.service.impl;
 
+import com.google.gson.Gson;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
 import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.oned.EAN13Writer;
 import com.google.zxing.qrcode.QRCodeWriter;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import vn.microservice.common.OrderStatus;
 import vn.microservice.controller.request.PlaceOrderRequest;
 import vn.microservice.controller.request.PmtOrderMessage;
@@ -27,6 +36,11 @@ import java.util.List;
 public class OrderServiceImpl implements OrderService {
 
     private final OrderRepository orderRepository;
+
+    private final KafkaTemplate<String, String> kafkaTemplate;
+
+    @Value("${spring.kafka.topic}")
+    private String checkoutOrderTopic;
 
     @Override
     public List<Order> getAll() {
@@ -100,6 +114,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public String checkoutOrder(String orderId) {
         log.info("Checkout order: {}", orderId);
 
@@ -112,6 +127,78 @@ public class OrderServiceImpl implements OrderService {
         message.setCurrency(order.getCurrency());
         message.setPaymentMethod(order.getPaymentMethod());
 
+        Gson gson = new Gson();
+        String json = gson.toJson(message);
+
+//        for (int i = 0; i <= 1000000; i++) {
+            kafkaTemplate.send(checkoutOrderTopic, json);
+//        }
+
         return "Processing";
+    }
+
+    // Method cancel order
+
+    @KafkaListener(topics = "checkout-order-call-back-topic", groupId = "checkout-order-call-back-group")
+    public void callBackOrder(String message)  {
+        log.info("callBackOrder = {}", message);
+
+//        Gson gson = new Gson();
+//        CallBackMessage callBackMessage = gson.fromJson(message, CallBackMessage.class);
+//
+//        Order order = orderRepository.findById(callBackMessage.orderId).get();
+//        order.setStatus(OrderStatus.PROCESSING.getValue());
+
+        //orderRepository.save(order);
+
+        // push inventory
+    }
+
+    @Getter
+    @Builder
+    @AllArgsConstructor
+    private static class CallBackMessage {
+        private String orderId;
+        private String paymentStatus;
+    }
+
+
+    @Scheduled(fixedRate = 2000)
+    public void scheduleFixedRateTask1() {
+        for (int i = 0; i < 1000000; i++) {
+            kafkaTemplate.send(checkoutOrderTopic, "task1: " + i);
+        }
+    }
+
+
+    @Scheduled(fixedRate = 2000)
+    public void scheduleFixedRateTask2() {
+        for (int i = 0; i < 1000000; i++) {
+            kafkaTemplate.send(checkoutOrderTopic, "task2: " + i);
+        }
+    }
+
+
+    @Scheduled(fixedRate = 2000)
+    public void scheduleFixedRateTask3() {
+        for (int i = 0; i < 1000000; i++) {
+            kafkaTemplate.send(checkoutOrderTopic, "task3: " + i);
+        }
+    }
+
+
+    @Scheduled(fixedRate = 2000)
+    public void scheduleFixedRateTask4() {
+        for (int i = 0; i < 1000000; i++) {
+            kafkaTemplate.send(checkoutOrderTopic, "task4: " + i);
+        }
+    }
+
+
+    @Scheduled(fixedRate = 2000)
+    public void scheduleFixedRateTask5() {
+        for (int i = 0; i < 1000000; i++) {
+            kafkaTemplate.send(checkoutOrderTopic, "task5: " + i);
+        }
     }
 }
