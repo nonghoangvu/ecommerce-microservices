@@ -5,40 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f8b3484-84ca-45d5-9b4c-9063dbd25860" name="Changes" comment="STRIPE">
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/common/Constant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/common/EGender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/common/EUserStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/common/EUserType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/common/Platform.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/common/TokenType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/config/MessageUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/config/SpringFoxConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/dto/request/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/dto/response/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/dto/response/TokenResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/exception/GlobalException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/exception/InvalidDataException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/exception/UnauthorizedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/service/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/service/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/service/impl/AuthenticationServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/service/impl/JwtServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/messages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/messages_vi.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/proto/VerifyTokenGrpcService.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/vn/microservice/config/CustomizeFilter$Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/classes/vn/microservice/config/CustomizeFilter$Config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/vn/microservice/config/CustomizeFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/classes/vn/microservice/config/CustomizeFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/classes/application-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/classes/vn/microservice/AccountServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/classes/vn/microservice/controller/AccountController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/application-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/vn/microservice/ApiGatewayApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/vn/microservice/config/CustomizeFilter$Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/vn/microservice/config/CustomizeFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/surefire-reports/TEST-vn.microservice.ApiGatewayApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/surefire-reports/vn.microservice.ApiGatewayApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/test-classes/vn/microservice/ApiGatewayApplicationTests.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/vn/microservice/config/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/classes/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/target/classes/vn/microservice/controller/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/classes/vn/microservice/controller/AuthenticationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,14 +119,14 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "authentication-service",
+    "git-widget-placeholder": "grpc",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/vunh/microservice/codebase",
     "onboarding.tips.debug.path": "D:/vunh/microservice/codebase/mail-service/src/main/java/vn/microservice/Main.java",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "File.Encoding"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -154,7 +148,7 @@
       <recent name="vn.microservice.i18n" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ApiGatewayApplication">
+  <component name="RunManager" selected="Application.AuthenticationServiceApplication">
     <configuration name="AccountService" type="Application" factoryName="Application">
       <option name="envFilePaths">
         <option value="$PROJECT_DIR$/.env" />
@@ -252,8 +246,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.AuthenticationServiceApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.PaymentServiceApplication" />
         <item itemvalue="Application.OrderServiceApplication" />
         <item itemvalue="Application.ProductServiceApplication" />
