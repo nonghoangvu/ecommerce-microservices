@@ -3,6 +3,9 @@ package vn.microservice.common;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+/**
+ * Order status
+ */
 @Getter
 @AllArgsConstructor
 public enum OrderStatus {

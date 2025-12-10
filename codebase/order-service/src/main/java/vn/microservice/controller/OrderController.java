@@ -8,9 +8,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import vn.microservice.controller.request.PlaceOrderRequest;
+import vn.microservice.model.Order;
 import vn.microservice.service.OrderService;
 
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.util.List;
 
 @Validated
 @RestController
@@ -20,9 +24,13 @@ import java.awt.image.BufferedImage;
 public class OrderController {
     private final OrderService orderService;
 
+    /**
+     * Get all order
+     * @return List order
+     */
     @GetMapping("/list")
-    public String getAll() {
-        return "order list";
+    public ResponseEntity<List<Order>> getAll() {
+        return ResponseEntity.ok(orderService.getAll());
     }
 
     @PostMapping("/placeOrder")
@@ -32,14 +40,24 @@ public class OrderController {
     }
 
     @PostMapping(path = "/qrcode", produces = MediaType.IMAGE_PNG_VALUE)
-    public ResponseEntity<BufferedImage> generateQRCodeImage(@RequestParam String qrCode) throws Exception {
-        return ResponseEntity.ok(orderService.generateQRCodeImage(qrCode));
+    public ResponseEntity<?> generateQRCodeImage(@RequestParam String qrCode) throws Exception {
+        BufferedImage image = orderService.generateQRCodeImage(qrCode);
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        ImageIO.write(image, "png", baos);
+
+        return ResponseEntity.ok().contentType(MediaType.IMAGE_PNG).body(baos.toByteArray());
     }
 
     @PostMapping(path = "/bar-code", produces = MediaType.IMAGE_PNG_VALUE)
-    public ResponseEntity<BufferedImage> generateBarcode(@RequestParam String barcode) throws Exception {
+    public ResponseEntity<?> generateBarcode(@RequestParam String barcode) throws Exception {
         log.info("generateBarcode request: {}", barcode);
-        return ResponseEntity.ok(orderService.generateBarCodeImage(barcode));
+        BufferedImage image = orderService.generateBarCodeImage(barcode);
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        ImageIO.write(image, "png", baos);
+
+        return ResponseEntity.ok().contentType(MediaType.IMAGE_PNG).body(baos.toByteArray());
     }
 
     @PostMapping("/checkout/{orderId}")

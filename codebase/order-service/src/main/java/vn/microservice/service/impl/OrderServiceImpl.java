@@ -8,7 +8,6 @@ import com.google.zxing.oned.EAN13Writer;
 import com.google.zxing.qrcode.QRCodeWriter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import vn.microservice.common.OrderStatus;
 import vn.microservice.controller.request.PlaceOrderRequest;
@@ -28,6 +27,11 @@ import java.util.List;
 public class OrderServiceImpl implements OrderService {
 
     private final OrderRepository orderRepository;
+
+    @Override
+    public List<Order> getAll() {
+       return orderRepository.findAll();
+    }
 
     @Override
     public String addOrder(PlaceOrderRequest request) {

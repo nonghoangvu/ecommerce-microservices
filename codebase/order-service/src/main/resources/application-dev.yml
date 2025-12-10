@@ -4,10 +4,11 @@ spring:
       on-profile: dev
   devtools:
     add-properties: true
-  mongodb:
-    host: ${MONGODB_HOST:44.221.50.201}
-    port: ${MONGODB_PORT:27017}
-    database: ${MONGODB_DB:order_db}
+  data:
+    mongodb:
+      host: ${MONGODB_HOST:localhost}
+      port: ${MONGODB_PORT:27017}
+      database: ${MONGODB_DB:order_db}
 openapi:
   service:
     api-docs: order-service
